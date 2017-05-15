@@ -1,7 +1,15 @@
 var svg = require('svgo');
 
 var svgo = new svg({
-  plugins: ['removeDoctype', 'removeComments'],
+  plugins: [
+    'removeDoctype', 
+    'removeComments',
+    { 
+      cleanupIDs: { 
+        minify: false
+      }
+    },
+  ],
 });
 
 module.exports = function (content) {
