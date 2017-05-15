@@ -6,8 +6,10 @@ var svgo = new svg({
     'removeComments',
     { 
       cleanupIDs: { 
-        minify: false
-      }
+        remove: false,
+        prefix: 'asdf-',
+        minify: true,
+      },
     },
   ],
 });
