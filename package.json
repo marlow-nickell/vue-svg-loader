@@ -16,6 +16,7 @@
   "bugs": "https://github.com/marlow-nickell/vue-svg-loader/issues",
   "homepage": "https://github.com/marlow-nickell/vue-svg-loader#readme",
   "dependencies": {
-    "svgo": "^0.7.1"
+    "svgo": "^0.7.1",
+    "loader-utils": "^1.0.2"
   }
 }

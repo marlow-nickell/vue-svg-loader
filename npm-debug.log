@@ -1,0 +1,102 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.8.2
+3 info using node@v6.2.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/marlow/Code/marlowModules/vue-svg-loader',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/marlow/.npm/@marlow/vue-svg-loader/0.0.2/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/marlow/.npm correctMkdir not in flight; initializing
+10 info lifecycle @marlow/vue-svg-loader@0.0.2~prepublish: @marlow/vue-svg-loader@0.0.2
+11 silly lifecycle @marlow/vue-svg-loader@0.0.2~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/marlow/.npm/@marlow/vue-svg-loader/0.0.2/package.tgz',
+12 verbose tar pack   '/Users/marlow/Code/marlowModules/vue-svg-loader' ]
+13 verbose tarball /Users/marlow/.npm/@marlow/vue-svg-loader/0.0.2/package.tgz
+14 verbose folder /Users/marlow/Code/marlowModules/vue-svg-loader
+15 verbose addLocalTarball adding from inside cache /Users/marlow/.npm/@marlow/vue-svg-loader/0.0.2/package.tgz
+16 verbose correctMkdir /Users/marlow/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd @marlow/vue-svg-loader@0.0.2
+18 verbose afterAdd /Users/marlow/.npm/@marlow/vue-svg-loader/0.0.2/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/marlow/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/marlow/.npm/@marlow/vue-svg-loader/0.0.2/package/package.json written
+21 silly publish { name: '@marlow/vue-svg-loader',
+21 silly publish   version: '0.0.2',
+21 silly publish   description: 'Use SVG files as Vue Components',
+21 silly publish   keywords: [ 'vue-svg-loader', 'svg', 'loader', 'webpack', 'vue' ],
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/marlow-nickell/vue-svg-loader.git' },
+21 silly publish   author: { name: 'Marlow Nickell' },
+21 silly publish   license: 'MIT',
+21 silly publish   main: 'index.js',
+21 silly publish   bugs: { url: 'https://github.com/marlow-nickell/vue-svg-loader/issues' },
+21 silly publish   homepage: 'https://github.com/marlow-nickell/vue-svg-loader#readme',
+21 silly publish   dependencies: { svgo: '^0.7.1' },
+21 silly publish   readme: '# vue-svg-loader <img src="https://img.shields.io/npm/dt/vue-svg-loader.svg">\nA webpack loader that allows to use SVG files as Vue Components.\n\n## Installation\n```\nnpm install --save-dev vue-svg-loader\nyarn add --dev vue-svg-loader\n```\n\n## Configuration\n```js\n{\n  test: /\\.svg$/,\n  loader: \'vue-svg-loader\', // `vue-svg` for webpack 1.x\n}\n```\n\n## Example code\n\n```html\n<template>\n  <nav id="menu">\n    <a href="...">\n      <SomeIcon class="icon" />\n      Some page\n    </a>\n  </nav>\n</template>\n\n<script>\nimport SomeIcon from \'./assets/some-icon.svg\';\n\nexport default {\n  name: \'menu\',\n  components: {\n    SomeIcon,\n  },\n};\n</script>\n```\n---\n*The idea behind this was inspired by [react-svg-loader](https://github.com/boopathi/react-svg-loader)*.\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '1ed59a27d951d687f3496f8a203e4951cc55fc54',
+21 silly publish   _id: '@marlow/vue-svg-loader@0.0.2',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: 'd5ce19e6befd4c610862d6da666c183fcad499cc',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name @marlow/vue-svg-loader
+24 silly mapToRegistry scope (from package name) @marlow
+25 verbose mapToRegistry no registry URL found in name for scope @marlow
+26 silly mapToRegistry scope (from config) @marlow
+27 verbose mapToRegistry no registry URL found in config for scope @marlow
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry http://registry.npmjs.org/
+30 silly mapToRegistry uri http://registry.npmjs.org/@marlow%2fvue-svg-loader
+31 verbose publish registryBase http://registry.npmjs.org/
+32 silly publish uploading /Users/marlow/.npm/@marlow/vue-svg-loader/0.0.2/package.tgz
+33 verbose request uri http://registry.npmjs.org/@marlow%2fvue-svg-loader
+34 verbose request sending authorization for write operation
+35 info attempt registry request try #1 at 3:02:57 PM
+36 verbose request using bearer token for auth
+37 verbose request id 37bf5f72bfc5ce6e
+38 http request PUT http://registry.npmjs.org/@marlow%2fvue-svg-loader
+39 http 403 http://registry.npmjs.org/@marlow%2fvue-svg-loader
+40 verbose headers { 'content-type': 'application/json',
+40 verbose headers   'cache-control': 'max-age=0',
+40 verbose headers   'content-length': '95',
+40 verbose headers   'accept-ranges': 'bytes',
+40 verbose headers   date: 'Mon, 15 May 2017 20:02:58 GMT',
+40 verbose headers   via: '1.1 varnish',
+40 verbose headers   connection: 'keep-alive',
+40 verbose headers   'x-served-by': 'cache-dfw1842-DFW',
+40 verbose headers   'x-cache': 'MISS',
+40 verbose headers   'x-cache-hits': '0',
+40 verbose headers   'x-timer': 'S1494878578.842408,VS0,VE1045' }
+41 verbose request invalidating /Users/marlow/.npm/registry.npmjs.org/_40marlow_252fvue-svg-loader on PUT
+42 error publish Failed PUT 403
+43 verbose stack Error: "You cannot publish over the previously published version 0.0.2." : @marlow/vue-svg-loader
+43 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+43 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+43 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+43 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+43 verbose stack     at emitTwo (events.js:106:13)
+43 verbose stack     at Request.emit (events.js:191:7)
+43 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+43 verbose stack     at emitOne (events.js:101:20)
+43 verbose stack     at Request.emit (events.js:188:7)
+43 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+44 verbose statusCode 403
+45 verbose pkgid @marlow/vue-svg-loader
+46 verbose cwd /Users/marlow/Code/marlowModules/vue-svg-loader
+47 error Darwin 16.5.0
+48 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+49 error node v6.2.2
+50 error npm  v3.8.2
+51 error code E403
+52 error "You cannot publish over the previously published version 0.0.2." : @marlow/vue-svg-loader
+53 error If you need help, you may report this error at:
+53 error     <https://github.com/npm/npm/issues>
+54 verbose exit [ 1, true ]

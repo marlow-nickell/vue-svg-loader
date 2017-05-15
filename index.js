@@ -1,22 +1,21 @@
 var svg = require('svgo');
-
-var svgo = new svg({
-  plugins: [
-    'removeDoctype', 
-    'removeComments',
-    { 
-      cleanupIDs: { 
-        remove: false,
-        prefix: 'asdf-',
-        minify: true,
-      },
-    },
-  ],
-});
+var loaderUtils = require("loader-utils");
 
 module.exports = function (content) {
   this.cacheable && this.cacheable(true);
   this.addDependency(this.resourcePath);
+
+  var svgo = new svg({
+    plugins: [
+      'removeDoctype', 
+      'removeComments',
+      { 
+        cleanupIDs: { 
+          prefix: loaderUtils.interpolateName(this, '[name]', {content: content}),
+        },
+      },
+    ],
+  });
 
   var cb = this.async();
 
